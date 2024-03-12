@@ -8,18 +8,22 @@ public class App {
     
 
     public static void main(String[] args) {
-        String[] valueArray = new String[20];
+        String[] valueArray = new String[4];
         String value;
+        StringBuilder result = new StringBuilder("");
         
        
         
       for(int i = 0;i<valueArray.length;i++){
-          value = JOptionPane.showInputDialog(null,"Enter Marks For Student " + (i + 1));
+          value = JOptionPane.showInputDialog(null,"Enter Your Values " + (i + 1));
             
          valueArray[i] = value;
         }
       
-        JOptionPane.showMessageDialog(null, valueArray);
+        for(int i = 0;i < valueArray.length;i++){
+        result.append(i+1).append(": ").append(valueArray[i]).append("\n");
+        }
+        JOptionPane.showMessageDialog(null,result.toString());
         
         
     }        
